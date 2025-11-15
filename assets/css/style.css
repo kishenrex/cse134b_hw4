@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@400;700&display=swap');
 
+@view-transition {
+    navigation: auto;
+}
+
 :root {
     --primary-color-p3: color(display-p3 0.051 0.435 0.992);
     --primary-color: var(--primary-color-p3, #0d6efd);
@@ -148,6 +152,8 @@ header {
     background-color: var(--header-bg, #f8f9fa);
     padding: 1.5em 2em;
     border-bottom: 1px solid #dee2e6;
+
+    view-transition-name: main-header;
     
     nav ul {
         display: flex;
