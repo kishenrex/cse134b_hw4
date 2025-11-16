@@ -9,7 +9,45 @@
 </head>
 <body id="form-page">
 
-    <button id="theme-toggle">Toggle Dark Mode</button>
+    <button id="theme-picker-btn">Customize Theme</button>
+
+    <dialog id="theme-dialog">
+        <form method="dialog">
+            <fieldset class="preset-themes">
+                <legend>Preset Themes</legend>
+                <label>
+                    <input type="radio" name="theme" value="light"> Light
+                </label>
+                <label>
+                    <input type="radio" name="theme" value="dark"> Dark
+                </label>
+                <label>
+                    <input type="radio" name="theme" value="sepia"> Sepia
+                </label>
+            </fieldset>
+
+            <fieldset class="custom-controls">
+                <legend>Customize</legend>
+                <label for="custom-bg">Background:</label>
+                <input type="color" id="custom-bg" value="#ffffff">
+
+                <label for="custom-text">Text:</label>
+                <input type="color" id="custom-text" value="#212529">
+
+                <label for="custom-font">Font:</label>
+                <select id="custom-font">
+                    <option value="default">Default (Serif Headings)</option>
+                    <option value="sans-serif">Modern (Sans-Serif)</option>
+                </select>
+            </fieldset>
+
+            <div class="dialog-actions">
+                <button type="button" id="apply-custom">Apply Custom</button>
+                <button type="button" id="reset-custom">Reset</button>
+                <button type="submit" id="close-dialog">Close</button>
+            </div>
+        </form>
+    </dialog>
     <noscript>
         <p style="text-align: center; color: #d9534f; font-weight: 600;">
             Note: Theme toggling requires JavaScript to be enabled.
